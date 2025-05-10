@@ -1,0 +1,73 @@
+#issues with original data that are to be solved
+1)Dirty data
+
+Table-patients:
+
+-> issue at patient_id 9 name misspelled as "dsvid" instead of david #accuracy ✅
+
+->state cols some are given as shortforms some fullforms for eg"ny and newyork are both same" this may become issues in further #consistency ✅
+
+-> pincode some are 5 digit and some are 4 digit inproper #validity ✅
+
+->12 missing values in adress,city,state,zipcode,country,contact #completeness ✅
+
+-> incorrect dtype assigned to assigned_sex,birthdate,zipcode #validity ✅
+
+->duplicate entries by name of john doe #accuracy ✅
+
+-> there is a girl of id 211 whose weight is 48 pound which is very less for her age ,height that's an entry issues #accuracy
+
+-> id 4 height entry is wrong #accuracy
+
+Table-treatments: 
+-> in this given_name,sur_name columns are all in lower case when whereas in patients table first letter is capital .it shows issues when we want to merge #consistency✅
+
+->u can remove 'U' as value is u for all #VALIDITY ✅
+
+-> hiphen - in novolon and auralin should be replaced by Nan as comp does not consider as isempty if - is there it considers it as another value #VALIDITY ✅
+
+->some missing values in hba1c_change #completeness ✅
+
+->1 duplicate entry by name joseph day #accuracy✅
+
+->in hba1c_change 9 is mistken instead of 4 for most of cases #accuracy ✅
+
+Table- treatments_cut:
+
+-> in this given_name,sur_name columns are all in lower case when whereas in patients table first letter is capital .it shows issues when we want to merge #consistency✅
+
+->u can remove u as value is u for all #VALIDITY ✅
+
+-> hiphen - in novolon and auralin should be replaced by Nan as comp does not consider as isempty if - is there it considers it as another value #validity ✅
+
+->some missing values in hba1c_change #completeness ✅
+
+->1 duplicate entry by name joseph day #accuracy ✅
+
+->in hba1c_change 9 is mistken instead of 4 for most of cases #accuracy ✅
+
+Table- adverse_reactions: 
+
+-> in this given_name,sur_name columns are all in lower case when whereas in patients table first letter is capital .it shows issues when we want to merge #consistency ✅
+
+
+
+
+
+2) Messy data ✅
+
+Table-patients:
+
+->patient number and email are merged into single cell so seperate✅
+
+Table-treatments:
+
+-> auralin novodra should be split into two as start and end values ->merge treatments &treatments_cut✅
+
+Table-treatments_cut:
+
+-> auralin novodra should be split into two as start and end values✅
+
+Table- adverse_reactions:
+
+-> adverse table should not exist manually,is unnecessary actually u can add it beside treatments✅
